@@ -7,6 +7,8 @@ import openpyxl
 from sklearn.feature_extraction.text import TfidfVectorizer
 import unicodedata as ud
 
+#functions to check whether the ML model approves the match
+
 def svmapproves(model, lb, comp):
     arr1q = list(comp[0].toarray())
     arr1 = np.array(arr1q)
@@ -43,6 +45,7 @@ train = openpyxl.load_workbook("K:/Thesis/datasets/altbl2/artsmall262/artificial
 sh = full_dataset.active
 all_items =[]
 
+#optimal variables found for this example
 cutoff = 0.5
 decrease = 0.9
 
